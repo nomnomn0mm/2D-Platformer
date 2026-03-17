@@ -19,8 +19,8 @@ func _physics_process(delta):
 			target_pos = start_pos
 
 
-func _on_body_entered(body):
+func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("Player"):
 		return
-	
 	print("deal damage to player")
+	body.take_damage(1)
