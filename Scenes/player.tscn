@@ -1,13 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://dv0g1jn3n7ini"]
+[gd_scene load_steps=15 format=3 uid="uid://dv0g1jn3n7ini"]
 
 [ext_resource type="Script" uid="uid://dm4f85m18rkkw" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bvkwdcftqphax" path="res://Sprites/Characters/character_0006.png" id="1_v0iea"]
-[ext_resource type="Texture2D" uid="uid://dilrt1oeixf0x" path="res://Sprites/Characters/character_0007.png" id="3_6t5aa"]
 [ext_resource type="Script" uid="uid://cva4i4q883bsl" path="res://Scripts/camera_shake.gd" id="3_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://cib4wg348vb77" path="res://Sprites/Characters/character.png" id="4_8erm5"]
 [ext_resource type="Script" uid="uid://hfptd803ygap" path="res://Scripts/player_ui.gd" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://miq1be7j6s70" path="res://Sprites/Objects/tile_0044.png" id="4_vgqql"]
+[ext_resource type="Texture2D" uid="uid://b0tyfpo412v4l" path="res://Sprites/Characters/character jump.png" id="5_f1ek2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+radius = 4.0
 height = 24.0
 
 [sub_resource type="Animation" id="Animation_3smsa"]
@@ -38,7 +40,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_v0iea")]
+"values": [ExtResource("4_8erm5")]
 }
 
 [sub_resource type="Animation" id="Animation_fkybt"]
@@ -54,7 +56,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_6t5aa")]
+"values": [ExtResource("5_f1ek2")]
 }
 
 [sub_resource type="Animation" id="Animation_x3wgy"]
@@ -71,7 +73,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.12421598),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("3_6t5aa"), ExtResource("1_v0iea")]
+"values": [ExtResource("5_f1ek2"), ExtResource("4_8erm5")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8erm5"]
@@ -92,6 +94,8 @@ script = ExtResource("1_cvnsp")
 metadata/_edit_group_ = true
 
 [node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -15.999999)
+scale = Vector2(0.06, 0.06)
 texture = ExtResource("1_v0iea")
 offset = Vector2(0, -12)
 
