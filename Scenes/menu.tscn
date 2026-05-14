@@ -5,7 +5,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_158mb"]
 font_size = 48
-font_color = Color(0.27636182, 0.65087646, 0.9084659, 1)
+font_color = Color(0.3303434, 0.607694, 0.42250913, 1)
 outline_size = 5
 shadow_size = 20
 shadow_color = Color(1, 1, 1, 0.44313726)
@@ -41,7 +41,7 @@ offset_right = 258.0
 offset_bottom = -70.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "2d Platformer game"
+text = "To Grandma's House"
 label_settings = SubResource("LabelSettings_158mb")
 horizontal_alignment = 1
 vertical_alignment = 1
