@@ -122,8 +122,8 @@ sources/1 = SubResource("TileSetAtlasSource_h8oof")
 [node name="Main2" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="." groups=["background"]]
-position = Vector2(1167, -216.00002)
-scale = Vector2(4.2, 4.2)
+position = Vector2(1162.9999, -125)
+scale = Vector2(3, 3)
 script = ExtResource("2_ewulq")
 metadata/_edit_group_ = true
 

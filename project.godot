@@ -23,6 +23,10 @@ config/icon="res://icon.svg"
 
 PlayerStats="*res://Scripts/player_stats.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor]
 
 import/use_multiple_threads=false
