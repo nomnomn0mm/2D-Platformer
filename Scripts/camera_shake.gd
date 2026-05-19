@@ -5,6 +5,7 @@ var intensity : float = 0
 func _ready() -> void:
 	get_parent().OnUpdateHealth.connect(_damage_shake)
 	
+@warning_ignore("unused_parameter")
 func _damage_shake (health : int):
 	intensity = 3
 	

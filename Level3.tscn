@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://dbfjcefo24vy1"]
+[gd_scene load_steps=13 format=4 uid="uid://dbfjcefo24vy1"]
 
 [ext_resource type="Texture2D" uid="uid://cgdjhsjwm5y72" path="res://ambient_fores_pack/ambient_forest_enviorement.png" id="1_f63rs"]
+[ext_resource type="Script" uid="uid://d005sfg4f1ivj" path="res://background_level_3.gd" id="2_ewulq"]
 [ext_resource type="Texture2D" uid="uid://cwi0yf8l3jm2b" path="res://ambient_fores_pack/ambient_forest_tileset.png" id="2_xcs05"]
 [ext_resource type="Texture2D" uid="uid://dbbvitcka1fbm" path="res://ambient_fores_pack/parallax background/background_1.png" id="3_qlmxs"]
 [ext_resource type="Texture2D" uid="uid://cdjnxjmef20da" path="res://ambient_fores_pack/parallax background/background_2.png" id="4_h8oof"]
 [ext_resource type="Texture2D" uid="uid://ch0xga7u60b3y" path="res://ambient_fores_pack/parallax background/background_3.png" id="5_nqeel"]
 [ext_resource type="Texture2D" uid="uid://dpr4w65cjfsb6" path="res://ambient_fores_pack/parallax background/background_4.png" id="6_u5lf4"]
 [ext_resource type="Texture2D" uid="uid://bafxba3r8o4k2" path="res://ambient_fores_pack/parallax background/background_5.png" id="7_7swbh"]
+[ext_resource type="PackedScene" uid="uid://dv0g1jn3n7ini" path="res://Scenes/player.tscn" id="10_6vscs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_545p4"]
 texture = ExtResource("1_f63rs")
@@ -60,16 +62,22 @@ texture = ExtResource("1_f63rs")
 4:6/0 = 0
 5:6/0 = 0
 6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:7/0 = 0
 2:7/0 = 0
 3:7/0 = 0
 4:7/0 = 0
 5:7/0 = 0
 6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:7/0 = 0
+8:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:8/0 = 0
 2:8/0 = 0
 3:8/0 = 0
@@ -82,47 +90,118 @@ texture = ExtResource("1_f63rs")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h8oof"]
 texture = ExtResource("2_xcs05")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
 3:0/0 = 0
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
 3:1/0 = 0
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
 3:2/0 = 0
 0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:3/0 = 0
 3:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_nqeel"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_545p4")
 sources/1 = SubResource("TileSetAtlasSource_h8oof")
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_set = SubResource("TileSet_nqeel")
+[node name="Background" type="Node2D" parent="." groups=["background"]]
+position = Vector2(1593.0001, -280)
+scale = Vector2(3, 3)
+script = ExtResource("2_ewulq")
+metadata/_edit_group_ = true
 
-[node name="Background1" type="Sprite2D" parent="."]
+[node name="Background1" type="Sprite2D" parent="Background"]
 position = Vector2(-225, 29)
 texture = ExtResource("3_qlmxs")
 
-[node name="Background2" type="Sprite2D" parent="."]
+[node name="Background2" type="Sprite2D" parent="Background"]
 position = Vector2(-225, 29)
 texture = ExtResource("4_h8oof")
 
-[node name="Background3" type="Sprite2D" parent="."]
+[node name="Background3" type="Sprite2D" parent="Background"]
 position = Vector2(-225, 29)
 texture = ExtResource("5_nqeel")
 
-[node name="Background4" type="Sprite2D" parent="."]
+[node name="Background4" type="Sprite2D" parent="Background"]
 position = Vector2(-225, 29)
 texture = ExtResource("6_u5lf4")
 
-[node name="Background5" type="Sprite2D" parent="."]
+[node name="Background5" type="Sprite2D" parent="Background"]
 position = Vector2(-225, 29)
 texture = ExtResource("7_7swbh")
+
+[node name="Background" type="Node2D" parent="Background" groups=["background"]]
+position = Vector2(-250, 0)
+
+[node name="Background1" type="Sprite2D" parent="Background/Background"]
+position = Vector2(-225, 29)
+texture = ExtResource("3_qlmxs")
+
+[node name="Background2" type="Sprite2D" parent="Background/Background"]
+position = Vector2(-225, 29)
+texture = ExtResource("4_h8oof")
+
+[node name="Background3" type="Sprite2D" parent="Background/Background"]
+position = Vector2(-225, 30)
+texture = ExtResource("5_nqeel")
+
+[node name="Background4" type="Sprite2D" parent="Background/Background"]
+position = Vector2(-225, 29)
+texture = ExtResource("6_u5lf4")
+
+[node name="Background5" type="Sprite2D" parent="Background/Background"]
+position = Vector2(-225, 29)
+texture = ExtResource("7_7swbh")
+
+[node name="Background6" type="Node2D" parent="Background" groups=["background"]]
+position = Vector2(250, 0)
+
+[node name="Background1" type="Sprite2D" parent="Background/Background6"]
+position = Vector2(-225, 29)
+texture = ExtResource("3_qlmxs")
+
+[node name="Background2" type="Sprite2D" parent="Background/Background6"]
+position = Vector2(-225, 29)
+texture = ExtResource("4_h8oof")
+
+[node name="Background3" type="Sprite2D" parent="Background/Background6"]
+position = Vector2(-225, 30)
+texture = ExtResource("5_nqeel")
+
+[node name="Background4" type="Sprite2D" parent="Background/Background6"]
+position = Vector2(-225, 29)
+texture = ExtResource("6_u5lf4")
+
+[node name="Background5" type="Sprite2D" parent="Background/Background6"]
+position = Vector2(-225, 29)
+texture = ExtResource("7_7swbh")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(695, -125)
+tile_map_data = PackedByteArray("AADb/wQAAQAAAAAAAADc/wQAAQAAAAAAAADd/wQAAQAAAAAAAADe/wQAAQAAAAAAAADb/wUAAQAAAAEAAADc/wUAAQABAAEAAADd/wUAAQAAAAEAAADe/wUAAQAAAAEAAADh/wMAAQACAAIAAADi/wMAAQADAAIAAADh/wQAAQAAAAEAAADh/wUAAQAAAAIAAADi/wQAAQABAAEAAADi/wUAAQABAAIAAADm/wQAAQAAAAAAAADm/wUAAQAAAAEAAADp/wMAAQADAAMAAADp/wQAAQAAAAEAAADp/wUAAQAAAAIAAAD2/wMAAQAAAAAAAAD3/wMAAQAAAAAAAAD5/wMAAQAAAAAAAAD6/wMAAQAAAAAAAAD7/wMAAQAAAAAAAAD8/wMAAQAAAAAAAAD9/wMAAQAAAAAAAAD+/wMAAQAAAAAAAAD//wMAAQAAAAAAAAAAAAMAAQAAAAAAAAABAAMAAQAAAAAAAAACAAMAAQAAAAAAAAADAAMAAQAAAAAAAAAEAAMAAQAAAAAAAAAFAAMAAQAAAAAAAAAGAAMAAQAAAAAAAAAHAAMAAQAAAAAAAAAIAAMAAQAAAAAAAAAJAAMAAQAAAAAAAAD2/wQAAQAAAAEAAAD3/wQAAQAAAAEAAAD4/wQAAQAAAAEAAAD5/wQAAQAAAAEAAAD6/wQAAQAAAAEAAAD7/wQAAQAAAAEAAAD8/wQAAQAAAAEAAAD9/wQAAQAAAAEAAAD+/wQAAQAAAAEAAAD//wQAAQAAAAEAAAAAAAQAAQAAAAEAAAABAAQAAQAAAAEAAAACAAQAAQAAAAEAAAADAAQAAQAAAAEAAAAEAAQAAQAAAAEAAAAFAAQAAQAAAAEAAAAGAAQAAQAAAAEAAAAHAAQAAQAAAAEAAAAIAAQAAQAAAAEAAAAJAAQAAQAAAAEAAAD2/wUAAQAAAAIAAAD3/wUAAQAAAAIAAAD4/wUAAQAAAAIAAAD5/wUAAQAAAAIAAAD6/wUAAQAAAAIAAAD7/wUAAQAAAAIAAAD8/wUAAQAAAAIAAAD9/wUAAQAAAAIAAAD+/wUAAQAAAAIAAAD//wUAAQAAAAIAAAAAAAUAAQAAAAIAAAABAAUAAQAAAAIAAAACAAUAAQAAAAIAAAADAAUAAQAAAAIAAAAEAAUAAQAAAAIAAAAFAAUAAQAAAAIAAAAGAAUAAQAAAAIAAAAHAAUAAQAAAAIAAAAIAAUAAQAAAAIAAAAJAAUAAQAAAAIAAADs/wMAAQAAAAAAAADt/wIAAQACAAIAAADu/wIAAQAAAAAAAADv/wIAAQADAAMAAADw/wMAAQAAAAAAAADx/wQAAQAAAAAAAADs/wQAAQAAAAEAAADs/wUAAQAAAAIAAADt/wMAAQAAAAEAAADu/wMAAQAAAAEAAADv/wMAAQAAAAEAAADt/wQAAQAAAAEAAADu/wQAAQAAAAEAAADv/wQAAQAAAAEAAADw/wQAAQAAAAEAAADx/wUAAQAAAAIAAADw/wUAAQAAAAIAAADv/wUAAQAAAAIAAADu/wUAAQAAAAIAAADt/wUAAQAAAAIAAAD4/wMAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_nqeel")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="TileMapLayer"]
+position = Vector2(-1240, -74)
+tile_map_data = PackedByteArray("AAArAAgAAAACAAQAAAArAAcAAAACAAMAAAAqAAcAAAABAAMAAAAqAAYAAAABAAIAAAArAAYAAAACAAIAAAA+AAcAAAAEAAYAAAA9AAcAAAADAAYAAABQAAcAAAAKAAQAAABRAAcAAAALAAQAAABRAAYAAAALAAMAAABSAAUAAAAMAAIAAABRAAUAAAALAAIAAABQAAUAAAAKAAIAAABQAAYAAAAKAAMAAABPAAYAAAAJAAMAAABPAAUAAAAJAAIAAABOAAUAAAAIAAIAAABPAAQAAAAJAAEAAABQAAQAAAAKAAEAAABRAAQAAAALAAEAAABSAAQAAAAMAAEAAABPAAMAAAAJAAAAAABQAAMAAAAKAAAAAABRAAMAAAALAAAAAABKAAcAAAAGAAcAAABKAAYAAAAGAAYAAABSAAcAAAADAAYAAABTAAcAAAAEAAYAAAA=")
+tile_set = SubResource("TileSet_nqeel")
+
+[node name="Player" parent="." instance=ExtResource("10_6vscs")]
+position = Vector2(112, -59)

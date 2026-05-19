@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bj2wjre1h6or3" path="res://Scenes/coin.tscn" id="5_t7v2y"]
 [ext_resource type="PackedScene" uid="uid://u2b4k6a5qm08" path="res://Scenes/enemy.tscn" id="6_ait6c"]
 [ext_resource type="PackedScene" uid="uid://7r26fmpk331t" path="res://Scenes/end_flag.tscn" id="7_vcilj"]
-[ext_resource type="PackedScene" uid="uid://cw7lp67vp5x13" path="res://Scenes/menu.tscn" id="8_2mgoq"]
+[ext_resource type="PackedScene" uid="uid://dbfjcefo24vy1" path="res://Level3.tscn" id="8_2mgoq"]
 
 [node name="Main" type="Node2D"]
 
