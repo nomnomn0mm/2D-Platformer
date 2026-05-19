@@ -87,5 +87,5 @@ position = Vector2(973, -141)
 position = Vector2(775, -7)
 
 [node name="EndFlag" parent="." instance=ExtResource("6_evi0p")]
-position = Vector2(1199, -133)
+position = Vector2(1199, -125)
 scene_to_load = ExtResource("8_xrdnt")
