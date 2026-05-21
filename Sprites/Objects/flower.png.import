@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1nunjbgxf7cp"
-path="res://.godot/imported/fairies.png-e3f6ad481caeb1bef219a226b0bc6f83.ctex"
+uid="uid://cmhsc1pcwrb8x"
+path="res://.godot/imported/flower.png-33b2e26fc8466fce67a92140b65686d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/fairies.png"
-dest_files=["res://.godot/imported/fairies.png-e3f6ad481caeb1bef219a226b0bc6f83.ctex"]
+source_file="res://Sprites/Objects/flower.png"
+dest_files=["res://.godot/imported/flower.png-33b2e26fc8466fce67a92140b65686d0.ctex"]
 
 [params]
 
