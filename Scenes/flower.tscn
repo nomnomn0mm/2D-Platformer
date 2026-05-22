@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb8ugdt3jj0m4"]
+
+[ext_resource type="Script" uid="uid://s5ssamxkwef2" path="res://Scripts/flower.gd" id="1_4r3j5"]
+[ext_resource type="Texture2D" uid="uid://cmhsc1pcwrb8x" path="res://Sprites/Objects/flower.png" id="2_hbmji"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g537i"]
+radius = 2.0
+height = 12.0
+
+[node name="flower" type="Area2D"]
+script = ExtResource("1_4r3j5")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -3.0000002)
+scale = Vector2(0.342, 0.3)
+texture = ExtResource("2_hbmji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_g537i")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://ds75lvm8eqf4l"]
+[gd_scene load_steps=10 format=4 uid="uid://ds75lvm8eqf4l"]
 
 [ext_resource type="Script" uid="uid://b8qko3r2kqddy" path="res://Scripts/background_parallax.gd" id="1_lsmp6"]
 [ext_resource type="Texture2D" uid="uid://daddmg1hkc27d" path="res://Sprites/Backgrounds/backgroundForest.png" id="1_xfk5q"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://u2b4k6a5qm08" path="res://Scenes/enemy.tscn" id="4_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://bj2wjre1h6or3" path="res://Scenes/coin.tscn" id="5_6444e"]
 [ext_resource type="PackedScene" uid="uid://7r26fmpk331t" path="res://Scenes/end_flag.tscn" id="6_evi0p"]
+[ext_resource type="PackedScene" uid="uid://bb8ugdt3jj0m4" path="res://Scenes/flower.tscn" id="6_wrinw"]
 [ext_resource type="PackedScene" uid="uid://c8ta1wr1gs2vo" path="res://Scenes/level_2.tscn" id="8_xrdnt"]
 
 [node name="Main" type="Node2D"]
@@ -89,3 +90,23 @@ position = Vector2(775, -7)
 [node name="EndFlag" parent="." instance=ExtResource("6_evi0p")]
 position = Vector2(1199, -125)
 scene_to_load = ExtResource("8_xrdnt")
+
+[node name="flowers" type="Node2D" parent="."]
+position = Vector2(334, -24)
+
+[node name="flower" parent="flowers" instance=ExtResource("6_wrinw")]
+position = Vector2(54, -36)
+
+[node name="flower2" parent="flowers" instance=ExtResource("6_wrinw")]
+
+[node name="flower3" parent="flowers" instance=ExtResource("6_wrinw")]
+position = Vector2(238, -36)
+
+[node name="flower4" parent="flowers" instance=ExtResource("6_wrinw")]
+position = Vector2(361, 18)
+
+[node name="flower5" parent="flowers" instance=ExtResource("6_wrinw")]
+position = Vector2(611, -18)
+
+[node name="flower6" parent="flowers" instance=ExtResource("6_wrinw")]
+position = Vector2(537, -18)
