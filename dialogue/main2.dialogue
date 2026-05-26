@@ -1,0 +1,12 @@
+~ start
+Player: hello!
+Queen: don't hello me you @#$?@@!#&£@. You destroyed my people's homes. Who do you think you are? you $@#?!#@$&@!.
+Player: woah. Ok I'm sorry
+Queen: sorry don't cut it. You better help rebuild the houses. Or I'm gonna do something else you don't wanna know
+Player: ok ok geez. Should I help?
+- help
+	Queen: great! You will need to go to the mermaid kingdom and get the pearlessence. 
+- not help
+	Queen: watch out, @$$#@$##@$$
+- Start again => start
+- End the conversation => END
