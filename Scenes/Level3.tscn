@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dbfjcefo24vy1"]
+[gd_scene load_steps=20 format=4 uid="uid://dbfjcefo24vy1"]
 
 [ext_resource type="Texture2D" uid="uid://cgdjhsjwm5y72" path="res://ambient_fores_pack/ambient_forest_enviorement.png" id="1_f63rs"]
 [ext_resource type="Script" uid="uid://b8qko3r2kqddy" path="res://Scripts/background_parallax.gd" id="1_ncjpd"]
@@ -118,6 +118,9 @@ texture = ExtResource("2_xcs05")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_545p4")
 sources/1 = SubResource("TileSetAtlasSource_h8oof")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5kwq"]
+size = Vector2(49.999985, 56.47059)
 
 [node name="Main" type="Node2D"]
 
@@ -256,10 +259,19 @@ texture = ExtResource("11_dl4b5")
 texture = ExtResource("11_dl4b5")
 flip_h = true
 
-[node name="FairyQueen" type="Sprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(1625.9999, -155)
 scale = Vector2(1.7, 1.7)
+
+[node name="FairyQueen" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0.4706422, 0.76470566)
+scale = Vector2(1, 0.955)
 texture = ExtResource("13_dl4b5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0.29418945, 2.3529434)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_t5kwq")
 
 [node name="Player" parent="." instance=ExtResource("10_6vscs")]
 position = Vector2(112, -59)
