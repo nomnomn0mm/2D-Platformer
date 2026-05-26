@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://dbfjcefo24vy1"]
+[gd_scene load_steps=21 format=4 uid="uid://dbfjcefo24vy1"]
 
 [ext_resource type="Texture2D" uid="uid://cgdjhsjwm5y72" path="res://ambient_fores_pack/ambient_forest_enviorement.png" id="1_f63rs"]
 [ext_resource type="Script" uid="uid://b8qko3r2kqddy" path="res://Scripts/background_parallax.gd" id="1_ncjpd"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dv0g1jn3n7ini" path="res://Scenes/player.tscn" id="10_6vscs"]
 [ext_resource type="Texture2D" uid="uid://b1nunjbgxf7cp" path="res://Sprites/Characters/fairies.png" id="11_dl4b5"]
 [ext_resource type="Texture2D" uid="uid://0asiqs2twel7" path="res://Sprites/Characters/fairy queen.png" id="13_dl4b5"]
+[ext_resource type="PackedScene" uid="uid://bcselprmaj1sj" path="res://actionable.tscn" id="13_ms3ee"]
 [ext_resource type="PackedScene" uid="uid://7r26fmpk331t" path="res://Scenes/end_flag.tscn" id="14_t5kwq"]
 [ext_resource type="PackedScene" uid="uid://cw7lp67vp5x13" path="res://Scenes/menu.tscn" id="15_t5kwq"]
 
@@ -259,18 +260,16 @@ texture = ExtResource("11_dl4b5")
 texture = ExtResource("11_dl4b5")
 flip_h = true
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(1625.9999, -155)
-scale = Vector2(1.7, 1.7)
-
-[node name="FairyQueen" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(0.4706422, 0.76470566)
-scale = Vector2(1, 0.955)
+[node name="FairyQueen" type="Sprite2D" parent="fairies"]
+position = Vector2(1188, 93.83334)
+scale = Vector2(2.8333333, 2.7058332)
 texture = ExtResource("13_dl4b5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0.29418945, 2.3529434)
-scale = Vector2(1.0000002, 1.0000002)
+[node name="Actionable" parent="fairies/FairyQueen" instance=ExtResource("13_ms3ee")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fairies/FairyQueen/Actionable"]
+position = Vector2(-0.17645264, 1.6630707)
+scale = Vector2(1.0000001, 1.0471206)
 shape = SubResource("RectangleShape2D_t5kwq")
 
 [node name="Player" parent="." instance=ExtResource("10_6vscs")]

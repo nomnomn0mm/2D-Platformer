@@ -78,3 +78,8 @@ func _damage_flash ():
 func play_sound (sound : AudioStream):
 	audio.stream = sound
 	audio.play()      
+
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main2.dialogue"),"start")
+		return
