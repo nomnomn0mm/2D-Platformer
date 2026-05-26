@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccuxvdvs8vtj4"
-path="res://.godot/imported/flower.png-33b2e26fc8466fce67a92140b65686d0.ctex"
+uid="uid://0asiqs2twel7"
+path="res://.godot/imported/fairy queen.png-2357cf2671a266abe61bee339f66128e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objects/flower.png"
-dest_files=["res://.godot/imported/flower.png-33b2e26fc8466fce67a92140b65686d0.ctex"]
+source_file="res://Sprites/Characters/fairy queen.png"
+dest_files=["res://.godot/imported/fairy queen.png-2357cf2671a266abe61bee339f66128e.ctex"]
 
 [params]
 
