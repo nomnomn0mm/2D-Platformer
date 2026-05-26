@@ -1,14 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://cw7lp67vp5x13"]
 
 [ext_resource type="Script" uid="uid://ckm20ddnrw0kc" path="res://Scripts/menu.gd" id="1_xhh6f"]
-[ext_resource type="Texture2D" uid="uid://daddmg1hkc27d" path="res://Sprites/Backgrounds/backgroundForest.png" id="2_cayip"]
+[ext_resource type="Texture2D" uid="uid://dbbvitcka1fbm" path="res://ambient_fores_pack/parallax background/background_1.png" id="2_xhh6f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_158mb"]
 font_size = 48
-font_color = Color(0.3303434, 0.607694, 0.42250913, 1)
-outline_size = 5
-shadow_size = 20
-shadow_color = Color(1, 1, 1, 0.44313726)
+font_color = Color(0.32941177, 0.60784316, 0.42352942, 1)
+outline_size = 8
+outline_color = Color(0.81370014, 0.9612581, 0.85306525, 1)
+shadow_size = 10
+shadow_color = Color(0.22238806, 0.4352697, 0.29530165, 1)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -20,12 +21,13 @@ grow_vertical = 2
 script = ExtResource("1_xhh6f")
 
 [node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.6, 0.88235295, 0.972549, 1)
 layout_mode = 0
 offset_left = -3.0
-offset_top = -220.0
+offset_top = -496.0
 offset_right = 1147.0
-offset_bottom = 894.0
-texture = ExtResource("2_cayip")
+offset_bottom = 654.0
+texture = ExtResource("2_xhh6f")
 expand_mode = 4
 
 [node name="Title" type="Label" parent="."]

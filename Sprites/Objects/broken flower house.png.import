@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0tyfpo412v4l"
-path="res://.godot/imported/character jump.png-3820c093793b1b6342c424b19552afb6.ctex"
+uid="uid://dnu1psyx4ds0s"
+path="res://.godot/imported/broken flower house.png-87dc23c5d81f08dccc7c0f09fdb6e396.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/character jump.png"
-dest_files=["res://.godot/imported/character jump.png-3820c093793b1b6342c424b19552afb6.ctex"]
+source_file="res://Sprites/Objects/broken flower house.png"
+dest_files=["res://.godot/imported/broken flower house.png-87dc23c5d81f08dccc7c0f09fdb6e396.ctex"]
 
 [params]
 

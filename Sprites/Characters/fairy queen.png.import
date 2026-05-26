@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bykp6gj5dfj8x"
-path="res://.godot/imported/character fall.png-8ca28a9fc50f53c9a7f8fd95fe7613e9.ctex"
+uid="uid://0asiqs2twel7"
+path="res://.godot/imported/fairy queen.png-2357cf2671a266abe61bee339f66128e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/character fall.png"
-dest_files=["res://.godot/imported/character fall.png-8ca28a9fc50f53c9a7f8fd95fe7613e9.ctex"]
+source_file="res://Sprites/Characters/fairy queen.png"
+dest_files=["res://.godot/imported/fairy queen.png-2357cf2671a266abe61bee339f66128e.ctex"]
 
 [params]
 

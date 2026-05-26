@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bykp6gj5dfj8x"
-path="res://.godot/imported/character fall.png-8ca28a9fc50f53c9a7f8fd95fe7613e9.ctex"
+uid="uid://ccuxvdvs8vtj4"
+path="res://.godot/imported/flower.png-33b2e26fc8466fce67a92140b65686d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/character fall.png"
-dest_files=["res://.godot/imported/character fall.png-8ca28a9fc50f53c9a7f8fd95fe7613e9.ctex"]
+source_file="res://Sprites/Objects/flower.png"
+dest_files=["res://.godot/imported/flower.png-33b2e26fc8466fce67a92140b65686d0.ctex"]
 
 [params]
 
