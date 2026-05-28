@@ -18,7 +18,8 @@ var move_input : float
 @onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
 var take_damage_sfx : AudioStream = preload("res://Audio/take_damage.wav")
-var coin_sfx : AudioStream = preload("res://Audio/coin.wav")
+var coin_sfx : AudioStream = preload("res://Audio/pick flower.wav")
+var dialogue_sfx : AudioStream = preload("res://Audio/dramatic dialouge.wav")
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -82,4 +83,5 @@ func play_sound (sound : AudioStream):
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main2.dialogue"),"start")
+		play_sound(dialogue_sfx)
 		return
