@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dv0g1jn3n7ini" path="res://Scenes/player.tscn" id="10_6vscs"]
 [ext_resource type="Texture2D" uid="uid://b1nunjbgxf7cp" path="res://Sprites/Characters/fairies.png" id="11_dl4b5"]
 [ext_resource type="Texture2D" uid="uid://0asiqs2twel7" path="res://Sprites/Characters/fairy queen.png" id="13_dl4b5"]
-[ext_resource type="PackedScene" path="res://actionable.tscn" id="13_ms3ee"]
+[ext_resource type="PackedScene" uid="uid://cm4nla2nnhnhb" path="res://actionable.tscn" id="13_ms3ee"]
 [ext_resource type="PackedScene" uid="uid://7r26fmpk331t" path="res://Scenes/end_flag.tscn" id="14_t5kwq"]
 [ext_resource type="PackedScene" uid="uid://cw7lp67vp5x13" path="res://Scenes/menu.tscn" id="15_t5kwq"]
 [ext_resource type="AudioStream" uid="uid://mq62f4xmpij6" path="res://Audio/harp.wav" id="17_ktnig"]
@@ -123,7 +123,7 @@ sources/0 = SubResource("TileSetAtlasSource_545p4")
 sources/1 = SubResource("TileSetAtlasSource_h8oof")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t5kwq"]
-size = Vector2(49.999985, 56.47059)
+size = Vector2(17.058708, 57.058823)
 
 [node name="Main" type="Node2D"]
 
@@ -270,7 +270,7 @@ texture = ExtResource("13_dl4b5")
 [node name="Actionable" parent="fairies/FairyQueen" instance=ExtResource("13_ms3ee")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fairies/FairyQueen/Actionable"]
-position = Vector2(-0.17645264, 1.6630707)
+position = Vector2(-16.647095, 1.9710464)
 scale = Vector2(1.0000001, 1.0471206)
 shape = SubResource("RectangleShape2D_t5kwq")
 
@@ -291,3 +291,12 @@ stream = ExtResource("18_nfsas")
 volume_db = -4.624
 pitch_scale = 3.78
 autoplay = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1555.0
+offset_top = -92.0
+offset_right = 1732.0
+offset_bottom = -43.0
+scale = Vector2(0.5, 0.5)
+text = "      ^
+press space when here"

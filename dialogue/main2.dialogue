@@ -1,12 +1,12 @@
 ~ start
-Player: hello!
-Queen: don't hello me you @#$?@@!#&£@. You destroyed my people's homes. Who do you think you are? you $@#?!#@$&@!.
-Player: woah. Ok I'm sorry
-Queen: sorry don't cut it. You better help rebuild the houses. Or I'm gonna do something else you don't wanna know
-Player: ok ok geez. Should I help?
+Player: Hello!
+Queen: Don't hello me you @#$?@@!#&£@. You destroyed my people's homes. They're homeless and you killed some of them. Who do you think you are? you $@#?!#@$&@!.
+Player: Woah. Ok I'm sorry.
+Queen: Sorry don't cut it. Our economy is falling apart now. You better help rebuild the houses. Or I'm gonna do something else you don't wanna know.
+Player: Ok ok geez. Should I help?
 - help
-	Queen: great! You will need to go to the mermaid kingdom and get the pearlessence. 
+	Queen: Great! You will need to go to the mermaid kingdom and get the pearlessence. It's what helps restore our homes. It's also a precious item in the mermaid kingdom. Good luck.
 - not help
-	Queen: watch out, @$$#@$##@$$
+	Queen: Watch out, @$$#@$##@$$. Sleep with one eye open.
 - Start again => start
 - End the conversation => END

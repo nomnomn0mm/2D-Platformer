@@ -12,10 +12,12 @@ signal OnUpdateScore (score : int)
 @export var health : int = 3
 
 var move_input : float
+var input_vector: Vector2 = Vector2.ZERO
 
 @onready var sprite: Sprite2D = $Sprite
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var audio: AudioStreamPlayer = $AudioStreamPlayer
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
 var take_damage_sfx : AudioStream = preload("res://Audio/take_damage.wav")
 var coin_sfx : AudioStream = preload("res://Audio/pick flower.wav")
@@ -80,8 +82,19 @@ func play_sound (sound : AudioStream):
 	audio.stream = sound
 	audio.play()      
 
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main2.dialogue"),"start")
+	
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].play_dialogue()
 		play_sound(dialogue_sfx)
 		return
+
+	var x_axis: float = Input.get_axis("ui_left", "ui_right")
+	var y_axis: float = Input.get_axis("ui_up", "ui_down")
+	if x_axis:
+		input_vector = x_axis * Vector2.RIGHT
+	else:
+		input_vector = Vector2.ZERO
