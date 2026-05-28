@@ -128,8 +128,8 @@ size = Vector2(17.058708, 57.058823)
 [node name="Main" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="." groups=["background"]]
-position = Vector2(1593.0001, -280)
-scale = Vector2(3, 3)
+position = Vector2(502.99997, -235.00002)
+scale = Vector2(1.7, 1.7)
 script = ExtResource("1_ncjpd")
 metadata/_edit_group_ = true
 
@@ -292,7 +292,7 @@ volume_db = -4.624
 pitch_scale = 3.78
 autoplay = true
 
-[node name="Label" type="Label" parent="."]
+[node name="guide" type="Label" parent="."]
 offset_left = 1555.0
 offset_top = -92.0
 offset_right = 1732.0
@@ -300,3 +300,10 @@ offset_bottom = -43.0
 scale = Vector2(0.5, 0.5)
 text = "      ^
 press space when here"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 29.0
+offset_top = -184.0
+offset_right = 225.0
+offset_bottom = -161.0
+text = "background broken sorry"

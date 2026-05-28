@@ -204,7 +204,7 @@ offset_left = 19.0
 offset_top = 79.0
 offset_right = 206.0
 offset_bottom = 132.0
-text = "Score: 500"
+text = "Flower: 500"
 label_settings = SubResource("LabelSettings_vgqql")
 
 [node name="Direction" type="Marker2D" parent="."]
